@@ -35,10 +35,29 @@ function App() {
                 This is how EngageBud
                 <br /> looks like in action!
               </h2>
-              <input type="email" name="email" />
-              <input type="tel" name="phone" />
+              <div className="input_fields">
+                <img
+                  className="input_icons"
+                  src="./Assets/Others/mail.svg"
+                  alt=""
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="something@engagebud"
+                />
+              </div>
+              <div className="input_fields">
+                <img
+                  className="input_icons"
+                  src="./Assets/Others/phone.svg"
+                  alt=""
+                />
+                <input type="tel" name="phone" placeholder="9004 23xxxx" />
+              </div>
+
               <div className="terms_conditions">
-                <input type="checkbox" />
+                <input className="check_the_box" type="checkbox" />
                 <span>
                   I agree to receiving recurring automated messages at the
                   number I have provided. Consent is not a condition to

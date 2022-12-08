@@ -1,8 +1,67 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import "./Wheel.css";
+import styled, { keyframes } from "styled-components";
+
+const rotateWheel = keyframes`
+from{
+  transform: rotate(0deg);
+}
+to{
+  transform: rotate(3240deg);
+  /* transform: rotate(${(props) => props.deg}); */
+}
+`;
+
+const WheelContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > .letsRotate {
+    animation-name: ${rotateWheel};
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    /* animation:  6s ease-in-out 0s forwards; */
+  }
+
+  > img:nth-child(1) {
+    width: 486.6px;
+    height: 450.75px;
+    transition: all 0.5s;
+  }
+  > img:nth-child(2) {
+    position: absolute;
+    top: 280px;
+    width: 45px;
+    height: 55px;
+  }
+  > button {
+    cursor: pointer;
+    color: white;
+    background-color: #146531;
+    font-family: "Poppins", sans-serif;
+    width: 140px;
+    height: 60px !important;
+    font-size: 14pt;
+    padding: 10px 0px;
+    margin: 20px 0px 10px 0px;
+    border-radius: 50px;
+    border: none;
+  }
+`;
 
 const Wheel = () => {
-  const img = useRef(null);
+  const [rotate, setRotate] = useState("");
+
+  const animateImg = {
+    /* animation-name: ${rotateWheel}; */
+  };
   return (
     <div className="main_body">
       <img
@@ -25,10 +84,13 @@ const Wheel = () => {
         src="./Assets/Others/tabletBackBottom.svg"
         alt=""
       />
-      <div className="Wheel_body">
-        <img ref={img} src="./Assets/Images/wheel.png" alt="" />
-        <button type="submit">Spin</button>
-      </div>
+      <WheelContainer deg={"240deg"} className="Wheel_body">
+        <img className={rotate} src="./Assets/Images/wheel.png" alt="" />
+        <img src="./Assets/Images/pointer.png" alt="" />
+        <button type="submit" onClick={() => setRotate("letsRotate")}>
+          Spin
+        </button>
+      </WheelContainer>
     </div>
   );
 };

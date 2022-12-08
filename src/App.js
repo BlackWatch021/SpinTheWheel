@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Wheel from "./components/wheel/Wheel";
 
 function App() {
   let [change, setChange] = useState(false);
@@ -12,7 +13,7 @@ function App() {
           <img src="./Assets/Images/background.png" alt="" />
         </div>
         {change ? (
-          <div>Hey there</div>
+          <Wheel />
         ) : (
           <div className="main_body">
             <img

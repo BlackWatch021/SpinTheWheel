@@ -1,0 +1,28 @@
+.Wheel_body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Wheel_body > img {
+  width: 486.6px;
+  height: 450.75px;
+}
+
+.Wheel_body > button {
+  cursor: pointer;
+  color: white;
+  background-color: #146531;
+  font-family: "Poppins", sans-serif;
+  width: 140px;
+  height: 60px !important;
+  font-size: 14pt;
+  padding: 10px 0px;
+  margin: 20px 0px 10px 0px;
+  border-radius: 50px;
+  border: none;
+}

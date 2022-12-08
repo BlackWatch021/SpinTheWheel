@@ -147,11 +147,12 @@ button {
   background-color: #146531;
   font-family: "Poppins", sans-serif;
   width: 340px;
-  height: 50px !important;
+  height: 100px !important;
   font-size: 14pt;
   padding: 10px 0px;
   margin: 20px 0px 10px 0px;
   border-radius: 50px;
+  border: none;
 }
 button::selection {
   background-color: black;

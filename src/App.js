@@ -3,7 +3,7 @@ import "./App.css";
 import Wheel from "./components/wheel/Wheel";
 
 function App() {
-  let [change, setChange] = useState(true);
+  let [change, setChange] = useState(false);
 
   return (
     <div className="main_container">
@@ -53,6 +53,7 @@ function App() {
                       type="email"
                       name="email"
                       placeholder="something@engagebud"
+                      required
                     />
                   </div>
                   <div className="input_fields">
@@ -61,11 +62,16 @@ function App() {
                       src="./Assets/Others/phone.svg"
                       alt=""
                     />
-                    <input type="tel" name="phone" placeholder="9004 23XXXX" />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="9004 23XXXX"
+                      required
+                    />
                   </div>
 
                   <div className="terms_conditions">
-                    <input className="check_the_box" type="checkbox" />
+                    <input className="check_the_box" type="checkbox" required />
                     <span>
                       I agree to receiving recurring automated messages at the
                       number I have provided. Consent is not a condition to

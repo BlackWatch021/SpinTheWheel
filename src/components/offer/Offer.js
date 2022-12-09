@@ -1,53 +1,43 @@
 import React from "react";
+import "./Offer.css";
 
-const Offer = () => {
+const Offer = (prop) => {
+  const code = [
+    "XAXPDF20",
+    "HARPD300",
+    "NSXP3FN0",
+    "BASEDF23",
+    "NEXSDF21",
+    "HAMAN021",
+  ];
+
+  const offers = [
+    "30% SITEWIDE OFF",
+    "BUY 1 GET 1 FREE",
+    "FREE COFFEE MUG ON PURCHASE WORTH 1000+",
+    " Buy 2 Effervescent tablets & get 1 free",
+    "Free 50g teaon purchase of Rs. 500",
+    "HOT CHOCLATE FREE WITH TEA",
+  ];
+
+  console.log(prop.offer);
   return (
-    <div className="main_content_wrapper">
-      <div className="main_content">
+    <div className="main_content_wrapper_offer">
+      <div className="main_content_offer">
         <img src="./Assets/Images/mockWheel.png" alt="" />
-        <div className="user_details">
-          <h1>
-            This is how EngageBud
-            <br /> looks like in action!
-          </h1>
-          <div className="input_fields">
-            <img
-              className="input_icons"
-              src="./Assets/Others/mail.svg"
-              alt=""
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="something@engagebud"
-            />
-          </div>
-          <div className="input_fields">
-            <img
-              className="input_icons"
-              src="./Assets/Others/phone.svg"
-              alt=""
-            />
-            <input type="tel" name="phone" placeholder="9004 23XXXX" />
+        <div className="user_details_offer">
+          <span className="span1">Congrats! You Won:</span>
+          <h1>{offers[prop.offer]}</h1>
+
+          <div className="offer">
+            <div>{code[prop.offer]}</div>
+            <button>Copy</button>
           </div>
 
-          <div className="terms_conditions">
-            <input className="check_the_box" type="checkbox" />
-            <span>
-              I agree to receiving recurring automated messages at the number I
-              have provided. Consent is not a condition to purchase.
-            </span>
-          </div>
-          <button type="submit">Try your luck</button>
-          <span className="notice">
-            *You can spin the wheel only once! *If you win, you can claim your
-            coupon for 10 minutes only!
+          <button type="submit">Close Panel & Copy</button>
+          <span className="span2">
+            *You can claim your coupon for 10 minutes only!
           </span>
-
-          <div className="skip_it">
-            <span>No, I don't feel lucky</span>
-            <img src="./Assets/Others/skip.svg" alt="" />
-          </div>
         </div>
       </div>
     </div>

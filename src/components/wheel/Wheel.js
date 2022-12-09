@@ -74,6 +74,8 @@ const Wheel = () => {
     setTimeout(() => setNextPage(true), 7000);
   };
 
+  console.log(num);
+
   return (
     <div className="main_body">
       <img
@@ -97,7 +99,7 @@ const Wheel = () => {
         alt=""
       />
       {nextPage ? (
-        <Offer />
+        <Offer offer={num} />
       ) : (
         <WheelContainer deg={degrees[num]} className="Wheel_body">
           <img className={rotate} src="./Assets/Images/wheel.png" alt="" />

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Wheel.css";
 import styled, { keyframes } from "styled-components";
+import Offer from "../offer/Offer";
 
-const rotateWheel = keyframes`
+const rotateWheel = (deg) => keyframes`
 from{
   transform: rotate(0deg);
 }
 to{
-  transform: rotate(3240deg);
-  /* transform: rotate(${(props) => props.deg}); */
+  transform: rotate(${deg});
 }
 `;
 
@@ -22,12 +22,11 @@ const WheelContainer = styled.div`
   align-items: center;
 
   > .letsRotate {
-    animation-name: ${rotateWheel};
+    animation-name: ${(props) => rotateWheel(props.deg)};
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-fill-mode: forwards;
-    /* animation:  6s ease-in-out 0s forwards; */
   }
 
   > img:nth-child(1) {
@@ -57,11 +56,24 @@ const WheelContainer = styled.div`
 `;
 
 const Wheel = () => {
-  const [rotate, setRotate] = useState("");
+  const [rotate, setRotate] = useState();
+  const [nextPage, setNextPage] = useState(false);
+  let [num, setNum] = useState();
+  let degrees = [
+    "3240deg",
+    "3300deg",
+    "3360deg",
+    "3420deg",
+    "3480deg",
+    "3540deg",
+  ];
 
-  const animateImg = {
-    /* animation-name: ${rotateWheel}; */
+  const clicked = () => {
+    setNum(Math.round(Math.random() * 5));
+    setRotate("letsRotate");
+    setTimeout(() => setNextPage(true), 7000);
   };
+
   return (
     <div className="main_body">
       <img
@@ -84,13 +96,17 @@ const Wheel = () => {
         src="./Assets/Others/tabletBackBottom.svg"
         alt=""
       />
-      <WheelContainer deg={"240deg"} className="Wheel_body">
-        <img className={rotate} src="./Assets/Images/wheel.png" alt="" />
-        <img src="./Assets/Images/pointer.png" alt="" />
-        <button type="submit" onClick={() => setRotate("letsRotate")}>
-          Spin
-        </button>
-      </WheelContainer>
+      {nextPage ? (
+        <Offer />
+      ) : (
+        <WheelContainer deg={degrees[num]} className="Wheel_body">
+          <img className={rotate} src="./Assets/Images/wheel.png" alt="" />
+          <img src="./Assets/Images/pointer.png" alt="" />
+          <button type="submit" onClick={clicked}>
+            Spin
+          </button>
+        </WheelContainer>
+      )}
     </div>
   );
 };

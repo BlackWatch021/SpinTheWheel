@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Offer.css";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Offer = (prop) => {
+  const [codeCopied, setCodeCopied] = useState("notCopied");
+
   const code = [
     "XAXPDF20",
     "HARPD300",
@@ -13,14 +16,13 @@ const Offer = (prop) => {
 
   const offers = [
     "30% SITEWIDE OFF",
-    "BUY 1 GET 1 FREE",
-    "FREE COFFEE MUG ON PURCHASE WORTH 1000+",
-    " Buy 2 Effervescent tablets & get 1 free",
-    "Free 50g teaon purchase of Rs. 500",
     "HOT CHOCLATE FREE WITH TEA",
+    "Free 50g tea on purchase of Rs. 500",
+    " Buy 2 Effervescent tablets & get 1 free",
+    "FREE COFFEE MUG ON PURCHASE WORTH 1000+",
+    "BUY 1 GET 1 FREE",
   ];
 
-  console.log(prop.offer);
   return (
     <div className="main_content_wrapper_offer">
       <div className="main_content_offer">
@@ -31,7 +33,11 @@ const Offer = (prop) => {
 
           <div className="offer">
             <div>{code[prop.offer]}</div>
-            <button>Copy</button>
+            {/* <div>{code[2]}</div> */}
+            <CopyToClipboard text={code[prop.offer]}>
+              <button onClick={() => setCodeCopied("copied")}>Copy</button>
+            </CopyToClipboard>
+            <div className={codeCopied}>Copied</div>
           </div>
 
           <button type="submit">Close Panel & Copy</button>

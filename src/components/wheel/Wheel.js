@@ -74,8 +74,6 @@ const Wheel = () => {
     setTimeout(() => setNextPage(true), 7000);
   };
 
-  console.log(num);
-
   return (
     <div className="main_body">
       <img

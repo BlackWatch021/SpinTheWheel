@@ -3,7 +3,7 @@ import "./App.css";
 import Wheel from "./components/wheel/Wheel";
 
 function App() {
-  let [change, setChange] = useState(true);
+  let [change, setChange] = useState(false);
 
   return (
     <div className="main_container">

@@ -121,3 +121,163 @@
   font-size: 9pt;
   border-radius: 15px;
 }
+
+@media (max-width: 769px) {
+  .main_content_offer {
+    left: -100px;
+  }
+
+  .main_content_offer > img {
+    width: 300px;
+    height: 330px;
+  }
+
+  .user_details_offer {
+    margin-left: 20px;
+    width: 300px;
+  }
+
+  .span1 {
+    font-size: 12pt;
+  }
+
+  .user_details_offer > h1 {
+    font-size: 18pt;
+  }
+
+  .user_details_offer > button {
+    cursor: pointer;
+    color: white;
+    background-color: #146531;
+    font-family: "Poppins", sans-serif;
+    width: 230px;
+    height: 40px !important;
+    font-size: 12pt;
+    padding: 10px 0px;
+    margin: -60px 0px -30px 0px;
+    border-radius: 50px;
+    border: none;
+  }
+
+  .offer > div:nth-child(1) {
+    font-family: "Poppins", sans-serif;
+    background-color: #1414;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 50px;
+    color: white;
+    font-size: 17pt;
+  }
+
+  .offer > button {
+    width: 60px;
+    height: 50px;
+    font-size: 12pt;
+  }
+
+  .copied {
+    top: 195px;
+    left: 530px;
+    width: 50px;
+    height: 20px;
+    font-size: 7pt;
+  }
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+*/
+@media (max-width: 690px) {
+  .main_content_offer > img {
+    width: 280px;
+    height: 300px;
+  }
+  .copied {
+    top: 195px;
+    left: 510px;
+  }
+}
+
+/* 
+
+
+
+
+
+*/
+
+@media (max-width: 600px) {
+  .main_content_offer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -130px;
+  }
+
+  .main_content_offer > img {
+    width: 260px;
+    height: 280px;
+  }
+
+  .main_content_offer {
+    left: 0px;
+  }
+
+  .user_details_offer {
+    margin-left: 0px;
+  }
+
+  .span1 {
+    font-size: 12pt;
+    margin-top: 50px;
+  }
+  .span2 {
+    margin-top: 10px;
+  }
+
+  .user_details_offer > h1 {
+    font-size: 18pt;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .user_details_offer > button {
+    font-size: 12pt;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .offer > div:nth-child(1) {
+    font-family: "Poppins", sans-serif;
+    background-color: #1414;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 50px;
+    color: white;
+    font-size: 17pt;
+  }
+
+  .offer > button {
+    width: 60px;
+    height: 50px;
+    font-size: 12pt;
+  }
+
+  .copied {
+    top: 340px;
+    left: 210px;
+  }
+}

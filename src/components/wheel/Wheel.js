@@ -13,6 +13,7 @@ to{
 `;
 
 const WheelContainer = styled.div`
+  position: relative;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -36,22 +37,12 @@ const WheelContainer = styled.div`
   }
   > img:nth-child(2) {
     position: absolute;
-    top: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* top: 280px; */
     width: 45px;
     height: 55px;
-  }
-  > button {
-    cursor: pointer;
-    color: white;
-    background-color: #146531;
-    font-family: "Poppins", sans-serif;
-    width: 140px;
-    height: 60px !important;
-    font-size: 14pt;
-    padding: 10px 0px;
-    margin: 20px 0px 10px 0px;
-    border-radius: 50px;
-    border: none;
   }
 `;
 
@@ -78,34 +69,36 @@ const Wheel = () => {
     <div className="main_body">
       <img
         className="desktop_back"
-        src="./Assets/Others/desktopBack.svg"
+        src="./Assets/Images/desktopBack.png"
         alt=""
       />
       <img
         className="desktop_back"
-        src="./Assets/Others/desktopBackBottom.svg"
+        src="./Assets/Images/desktopBackBottom.png"
         alt=""
       />
       <img
         className="tablet_back"
-        src="./Assets/Others/tabletBack.svg"
+        src="./Assets/Images/tabletBack.png"
         alt=""
       />
       <img
         className="tablet_back"
-        src="./Assets/Others/tabletBackBottom.svg"
+        src="./Assets/Images/tabletBackBottom.png"
         alt=""
       />
       {nextPage ? (
         <Offer offer={num} />
       ) : (
-        <WheelContainer deg={degrees[num]} className="Wheel_body">
-          <img className={rotate} src="./Assets/Images/wheel.png" alt="" />
-          <img src="./Assets/Images/pointer.png" alt="" />
+        <div className="wheelContainer_wrapper">
+          <WheelContainer deg={degrees[num]} className="Wheel_body">
+            <img className={rotate} src="./Assets/Images/wheel.png" alt="" />
+            <img src="./Assets/Images/pointer.png" alt="" />
+          </WheelContainer>
           <button type="submit" onClick={clicked}>
             Spin
           </button>
-        </WheelContainer>
+        </div>
       )}
     </div>
   );

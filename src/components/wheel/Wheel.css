@@ -26,3 +26,26 @@
   border-radius: 50px;
   border: none;
 } */
+
+.wheelContainer_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wheelContainer_wrapper > button {
+  position: absolute;
+  top: 82vh;
+  cursor: pointer;
+  color: white;
+  background-color: #146531;
+  font-family: "Poppins", sans-serif;
+  width: 140px;
+  height: 60px !important;
+  font-size: 14pt;
+  padding: 10px 0px;
+  /* margin: 0px 0px 10px 0px; */
+  border-radius: 50px;
+  border: none;
+}

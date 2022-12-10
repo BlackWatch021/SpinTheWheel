@@ -17,22 +17,22 @@ function App() {
           <div className="main_body">
             <img
               className="desktop_back"
-              src="./Assets/Others/desktopBack.svg"
+              src="./Assets/Images/desktopBack.png"
               alt=""
             />
             <img
               className="desktop_back"
-              src="./Assets/Others/desktopBackBottom.svg"
+              src="./Assets/Images/desktopBackBottom.png"
               alt=""
             />
             <img
               className="tablet_back"
-              src="./Assets/Others/tabletBack.svg"
+              src="./Assets/Images/tabletBack.png"
               alt=""
             />
             <img
               className="tablet_back"
-              src="./Assets/Others/tabletBackBottom.svg"
+              src="./Assets/Images/tabletBackBottom.png"
               alt=""
             />
             <div className="main_content_wrapper">

@@ -44,6 +44,20 @@ const WheelContainer = styled.div`
     width: 45px;
     height: 55px;
   }
+
+  @media (max-width: 769px) {
+    > img:nth-child(1) {
+      width: 386.6px;
+      height: 350.75px;
+    }
+  }
+
+  @media (max-width: 690px) {
+    > img:nth-child(1) {
+      width: 316.6px;
+      height: 310.75px;
+    }
+  }
 `;
 
 const Wheel = () => {
@@ -78,12 +92,12 @@ const Wheel = () => {
         alt=""
       />
       <img
-        className="tablet_back"
+        className="tablet_back tablet_back1"
         src="./Assets/Images/tabletBack.png"
         alt=""
       />
       <img
-        className="tablet_back"
+        className="tablet_back tablet_back2"
         src="./Assets/Images/tabletBackBottom.png"
         alt=""
       />

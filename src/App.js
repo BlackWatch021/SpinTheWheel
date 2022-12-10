@@ -3,7 +3,7 @@ import "./App.css";
 import Wheel from "./components/wheel/Wheel";
 
 function App() {
-  let [change, setChange] = useState(false);
+  let [change, setChange] = useState(true);
 
   return (
     <div className="main_container">
@@ -26,12 +26,12 @@ function App() {
               alt=""
             />
             <img
-              className="tablet_back"
+              className="tablet_back tablet_back1"
               src="./Assets/Images/tabletBack.png"
               alt=""
             />
             <img
-              className="tablet_back"
+              className="tablet_back tablet_back2"
               src="./Assets/Images/tabletBackBottom.png"
               alt=""
             />
